@@ -1,0 +1,234 @@
+/*
+Theme Name: Planty Child
+Theme URI: http://openclassrooms.com
+Description: Thème enfant pour Planty
+Author: Stéphane LACROIX
+Author URI: http://openclassrooms.com
+Template: blocksy
+Version: 1.0.0
+*/
+
+@import url("../blocksy/style.css");
+
+/* Header : Hover sur Nous Rencontrer */
+.ct-header-text:hover {
+    font-weight: bold; 
+}
+
+/* Suppression des titres des pages wordpress */
+.entry-header {
+    display: none;
+}
+
+/* Mise en place du lien admin*/
+.ct-menu-link {
+display:none;
+width: 47px;
+height: 19px;
+left:-20px;
+padding: 0px 1px 0px 0px;
+gap: 0px;
+opacity: 0px;
+text-transform: capitalize;
+}
+
+.menu-item {
+    position:relative;
+    left: -50px;
+}
+
+
+/* Formulaire Page commander */
+
+
+/* Positionnement des 4 images */
+.image-fruit {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 20px; 
+}
+
+.image-fruit img {
+    width: 193px;
+    height: 128px;
+    display: block;
+    margin-bottom: 10px; 
+}
+
+/* Positionnement des 4 petits champs de saisies */
+.input-container {
+    display: flex;
+    justify-content: center; 
+    width: 100%; 
+}
+
+.quantity-input {
+    width: 39px;
+    height: 58px;
+    background-color: white;
+    text-align: center; 
+}
+
+.input-container .quantity-input {
+    width: 39px !important;
+    height: 58px !important;
+    background-color: white;
+}
+
+/* Titres */
+.form-title {
+    color: white;
+    font-family: Syne;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.title {
+    color: white;
+    font-family: Syne;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: left;
+    align-self: flex-start;
+    margin-bottom: 30px;
+}
+
+/* Mise en page du formulaire */
+.centered-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh; 
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+    max-width: 860px;
+}
+
+
+
+.image-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+    gap: 10px; 
+    margin-bottom: 20px; 
+    flex-wrap: nowrap; 
+}
+
+/* ligne horizontal */
+
+.custom-horizontal-line {
+    width: 100%;
+    border-bottom: 2px solid white; 
+    margin-bottom: 20px;
+    margin-top: 70px; 
+}
+
+/* Positionnement de la colonne */
+.form-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form-column {
+    width: 45%;
+}
+
+/* ligne verticale */
+.form-divider {
+    width: 2px;
+    background-color: white;
+    margin: 0 2%; 
+    height: 95%;
+}
+
+
+
+/* Champs de saisies et Bouton d'envoi */
+
+.form-container input.quantity-input {
+    color: #000; 
+    background-color: #fff; 
+    border: 1px solid #ccc; 
+    padding: 5px; 
+    box-sizing: border-box; 
+}
+
+.form-container label span {
+    color: #ffffff; 
+    font-family: 'Syne', sans-serif; 
+    font-size: 20px; 
+    font-weight: 400; 
+    line-height: 24px; 
+    text-align: left; 
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"] {
+    color: #000; 
+    background-color: #fff; 
+    border: 1px solid #ccc; 
+    padding: 5px; 
+    width: 383px; 
+    height: 71px; 
+    box-sizing: border-box; 
+    border-radius: 7px;
+    margin-top: 5px;
+}
+
+
+.form-container input[type="email"] {
+    color: #000 !important;
+    background-color: #fff !important;
+    border: 1px solid #ccc !important;
+    padding: 5px !important;
+}
+
+.form-container input[type="email"]:focus {
+    border-color: #007bff !important;
+    background-color: #fff !important;
+} 
+
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px; 
+}
+
+.submit-container input[type="submit"] {
+    width: 198px;
+    height: 55px;
+    position: absolute;
+    padding: 9px 57px 9px 56px;
+    border-radius: 5px 0 0 0;
+    opacity: 0;
+    background: #E0B9B4 !important;
+    border: none;
+    color: #fff !important;
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+
