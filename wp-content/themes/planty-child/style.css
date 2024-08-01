@@ -10,33 +10,39 @@ Version: 1.0.0
 
 @import url("../blocksy/style.css");
 
-/* Header : Hover sur Nous Rencontrer */
+/* Header : Personnalisation du Menu */
+.menu {
+    text-transform: lowercase; 
+    margin-left: 70px;
+}
 .ct-header-text:hover {
     font-weight: bold; 
 }
 
-/* Suppression des titres des pages wordpress */
-.entry-header {
-    display: none;
-}
 
 /* Mise en place du lien admin*/
 .ct-menu-link {
-display:none;
 width: 47px;
 height: 19px;
 left:-20px;
 padding: 0px 1px 0px 0px;
 gap: 0px;
 opacity: 0px;
-text-transform: capitalize;
 }
 
 .menu-item {
     position:relative;
     left: -50px;
 }
+.header-menu-2 {
+    position:relative;
+    left: -20px;
+}
 
+/* Suppression des titres des pages wordpress */
+.entry-header {
+    display: none;
+}
 
 /* Formulaire Page commander */
 
@@ -216,9 +222,9 @@ text-transform: capitalize;
     width: 198px;
     height: 55px;
     position: relative;
-    left:15%;
+    left:10%;
     border-radius: 5px 5px 5px 5px;
-    background-color: #ECE2DA !important;
+    background-color: #E0B9B4 !important;
     border: none;
     color: #fff !important;
     font-family: 'Syne', sans-serif;

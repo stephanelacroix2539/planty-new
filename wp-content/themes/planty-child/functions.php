@@ -16,20 +16,27 @@ add_action('wp_enqueue_scripts', 'planty_child_enqueue_styles');
 
 // Hook du lien admin //
 
-// Fonction pour ajouter le lien "Admin" au menu
-function add_admin_link_to_menu($items, $args) {
+// Ajout du lien "Admin" dans le menu pour les utilisateurs connectés
+add_filter('wp_nav_menu_items', 'add_admin_link_to_menu', 10, 2);
 
-    // Vérifier si l'utilisateur est connecté
-    if (is_user_logged_in()) {
-        
-        // Ajouter le lien "Admin" uniquement si l'utilisateur est connecté
-        $admin_link = '<li class="menu-item"><a href="' . esc_url(admin_url()) . '">Admin</a></li>';
+function add_admin_link_to_menu($items, $args) {
+    // Vérifiez si l'utilisateur est connecté et si c'est le bon emplacement de menu
+    if (is_user_logged_in() && $args->theme_location == 'menu_2') {
+        // Créez le lien Admin
+        $admin_link = '<li class="menu-item"><a href="' . admin_url() . '">Admin</a></li>';
+        // Ajoutez le lien Admin aux éléments du menu
         $items .= $admin_link;
     }
     return $items;
 }
 
-// Attacher la fonction au hook wp_nav_menu_items
-add_filter('wp_nav_menu_items', 'add_admin_link_to_menu', 10, 2);
 
+add_filter('wp_nav_menu_items', 'debug_admin_link_to_menu', 10, 2);
+
+function debug_admin_link_to_menu($items, $args) {
+    if (is_user_logged_in()) {
+        error_log('Menu Location: ' . $args->theme_location); // Enregistre l'emplacement du menu dans le fichier de log des erreurs
+    }
+    return $items;
+}
 ?>
