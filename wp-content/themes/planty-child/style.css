@@ -239,38 +239,35 @@ opacity: 0px;
 
 /* Personnalisation du formulaire Nous rencontrer */
 
-.wpcf7 label {
-    font-family: 'Syne', sans-serif; 
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: left;
-    display: block; 
-    margin-bottom: 20px; 
+/* Centrer le formulaire */
+.wpcf7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.wpcf7 input[type="text"], 
+/* Styles pour les champs de texte et d'email */
+.wpcf7 input[type="text"],
 .wpcf7 input[type="email"] {
-    width: 383px;
+    width: 100%;
+    max-width: 383px;
     height: 71px;
     background-color: white;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Espacement entre les champs */
 }
 
 /* Styles pour le champ de message */
 .wpcf7 textarea {
-    width: 383px;
+    width: 100%;
+    max-width: 383px;
     height: 237px;
     background-color: white;
-}
-
-.wpcf7 input[type="text"]:focus,
-.wpcf7 input[type="email"]:focus,
-.wpcf7 textarea:focus {
-    background-color: white; 
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Espacement entre le champ et le bouton */
 }
 
 /* Styles pour le bouton d'envoi */
-
 .wpcf7 input[type="submit"] {
     background-color: #E0B9B4;
     color: white;
@@ -288,5 +285,33 @@ left:20%;
 }
 
 .wpcf7 input[type="submit"]:hover {
-    background-color: #e0b9b4;
+    background-color: #d3c5bd;
+}
+
+/* Media queries pour les petites tailles d'écran */
+@media (max-width: 768px) {
+    .wpcf7 input[type="text"],
+    .wpcf7 input[type="email"],
+    .wpcf7 textarea,
+    .wpcf7 input[type="submit"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .wpcf7 input[type="text"],
+    .wpcf7 input[type="email"],
+    .wpcf7 textarea,
+    .wpcf7 input[type="submit"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .wpcf7 input[type="text"],
+    .wpcf7 input[type="email"],
+    .wpcf7 textarea,
+    .wpcf7 input[type="submit"] {
+        width: 100%;
+    }
 }
