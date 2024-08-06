@@ -291,6 +291,17 @@ left:20%;
 }
 
 /* Media queries / responsive */
+
+@media (max-width: 1024px) {
+    .wpcf7 input[type="text"],
+    .wpcf7 input[type="email"],
+    .wpcf7 textarea,
+    .wpcf7 input[type="submit"] {
+        width: 90%;
+        height: 90%;
+    }
+}
+
 @media (max-width: 768px) {
     .wpcf7 input[type="text"],
     .wpcf7 input[type="email"],
@@ -330,7 +341,7 @@ left:20%;
     .wpcf7 input[type="email"],
     .wpcf7 textarea,
     .wpcf7 input[type="submit"] {
-        width: 100%;
+        width: 50%;
     }
 
     .form-columns {
@@ -375,7 +386,7 @@ left:20%;
     }
 
     .quantity-input {
-        width: 50px; /* Réduire la taille du champ de quantité */
+        width: 50px; 
     }
 
     .submit-container input[type="submit"] {
