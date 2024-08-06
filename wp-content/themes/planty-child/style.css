@@ -27,7 +27,6 @@ height: 19px;
 left:-20px;
 padding: 0px 1px 0px 0px;
 gap: 0px;
-opacity: 0px;
 }
 
 .menu-item {
@@ -53,14 +52,9 @@ opacity: 0px;
     flex-direction: column;
     align-items: center; 
     margin-bottom: 20px; 
+    gap:10px;
 }
 
-.image-fruit img {
-    width: 193px;
-    height: 128px;
-    display: block;
-    margin-bottom: 10px; 
-}
 
 /* Positionnement des 4 petits champs de saisies */
 .input-container {
@@ -86,7 +80,7 @@ opacity: 0px;
 .form-title {
     color: white;
     font-family: Syne;
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 36px;
     text-align: left;
@@ -96,7 +90,7 @@ opacity: 0px;
 .title {
     color: white;
     font-family: Syne;
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 36px;
     text-align: left;
@@ -119,19 +113,19 @@ opacity: 0px;
     flex-direction: column;
     align-items: center;
     width: 100%; 
-    max-width: 860px;
+    min-height: 100vh;
 }
 
 
 
 .image-container {
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    width: 100%; 
-    gap: 10px; 
-    margin-bottom: 20px; 
-    flex-wrap: nowrap; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+    margin-bottom: 20px;
 }
 
 /* ligne horizontal */
@@ -151,8 +145,10 @@ opacity: 0px;
 }
 
 .form-column {
-    width: 45%;
+    flex: 1;
+    padding: 20px;
 }
+
 
 /* ligne verticale */
 .form-divider {
@@ -213,12 +209,18 @@ opacity: 0px;
 .submit-container {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 198px;
+    height: 55px;
+    padding: 9px 57px 9px 56px;
+    gap: 5px;
+    border-radius: 5px 5px 5px 5px;
     margin-top: 50px;
     margin-bottom: 50px; 
 }
 
 .submit-container input[type="submit"] {
+    display: flex;
+    justify-content: center;
     width: 198px;
     height: 55px;
     position: relative;
@@ -244,6 +246,7 @@ opacity: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 /* Styles pour les champs de texte et d'email */
@@ -264,7 +267,7 @@ opacity: 0px;
     height: 237px;
     background-color: white;
     box-sizing: border-box;
-    margin-bottom: 10px; /* Espacement entre le champ et le bouton */
+    margin-bottom: 10px; 
 }
 
 /* Styles pour le bouton d'envoi */
@@ -279,7 +282,6 @@ opacity: 0px;
 padding: 9px 0px 9px 0px;
 gap: 0px;
 border-radius: 5px 5px 5px 5px;
-opacity: 0px;
 position:relative;
 left:20%;
 }
@@ -288,13 +290,38 @@ left:20%;
     background-color: #d3c5bd;
 }
 
-/* Media queries pour les petites tailles d'écran */
+/* Media queries / responsive */
 @media (max-width: 768px) {
     .wpcf7 input[type="text"],
     .wpcf7 input[type="email"],
     .wpcf7 textarea,
     .wpcf7 input[type="submit"] {
         width: 100%;
+        height: 100%;
+    }
+ 
+
+    .submit-container input[type="submit"] {
+        width: 150px;
+        font-size: 18px;
+        height: 50px;
+    }
+    .form-columns {
+        flex-direction: column;
+    }
+    
+    .form-divider {
+        display: none;
+    }
+    
+    .form-column {
+        padding: 10px;
+        width: 100%;
+    }
+    
+    .form-title {
+        font-size: 1.2rem;
+        text-align: center;
     }
 }
 
@@ -305,13 +332,68 @@ left:20%;
     .wpcf7 input[type="submit"] {
         width: 100%;
     }
-}
 
-@media (max-width: 320px) {
+    .form-columns {
+        flex-direction: column;
+    }
+    
+    .form-divider {
+        display: none;
+    }
+    
+    .form-column {
+        padding: 10px;
+        width: 100%;
+    }
+    
+    .form-title {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+    .submit-container input[type="submit"] {
+        width: 198px;
+        height: 55px;
+        padding: 9px 57px 9px 56px;
+        border-radius: 5px 5px 5px 5px;
+        font-size: 16px;
+        height: 45px;
+        left: 0; 
+    }
+
+
+@media (max-width: 319px) {
     .wpcf7 input[type="text"],
     .wpcf7 input[type="email"],
     .wpcf7 textarea,
     .wpcf7 input[type="submit"] {
         width: 100%;
     }
+    .form-container {
+        padding: 10px; 
+        min-height: 100vh;
+    }
+
+    .quantity-input {
+        width: 50px; /* Réduire la taille du champ de quantité */
+    }
+
+    .submit-container input[type="submit"] {
+        width: 100%;
+        left: 0; 
+    }
+    .form-title {
+        width: 100%;
+    }
+    .form-columns {
+        flex-direction: column; 
+        width: 60%;
+        min-height: 100vh;
+    }
+    .form-column {
+        width: 30%; 
+        margin-bottom: 20px;
+        min-height: 100vh;
+    }
 }
+
